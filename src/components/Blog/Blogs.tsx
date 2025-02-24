@@ -1,10 +1,34 @@
+"use client";
+import { BLOGS_CARD_LIST } from "@/utils/helper";
 import { SearchIcon } from "@/utils/icons";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import BlogCards from "../common/BlogCards";
+import CustomButton from "../common/CustomButton";
+import { useSearchParams } from "next/navigation";
 
 const Blogs = () => {
+  const [open, setOpen] = useState(3);
+  const [search, setSearch] = useState("");
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const param = searchParams.get("page");
+    if (param) {
+      setOpen(parseInt(param) * 3);
+    }
+  }, [searchParams]);
+  const BlogCard = BLOGS_CARD_LIST.slice(0, open).filter(
+    (obj) => obj.title && obj.title.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const handleShowMore = () => {
+    const nextPage = open < BLOGS_CARD_LIST.length ? open / 3 + 1 : 1;
+    setOpen(nextPage * 3);
+    window.history.pushState(null, "", `?page=${nextPage}`);
+  };
   return (
     <div className="flex justify-center items-center">
-      <div className="container flex justify-center items-center flex-col max-w-[1140px]">
+      <div className="container flex justify-center items-center flex-col w-full max-w-[1140px]">
         <div className="flex py-[18px] gap-2.5 items-center px-[30px] max-w-[558px] rounded-[39px] border border-solid border-white/25 w-full mb-[70px]">
           <label htmlFor="search">
             {" "}
@@ -12,9 +36,37 @@ const Blogs = () => {
           </label>
           <input
             id="search"
-            className="outline-none w-4/5 border-none bg-transparent text-white/80 placeholder:text-white/80 leading-[150%] max-md:text-sm"
+            onChange={(e) => setSearch(e.target.value)}
+            className="outline-none w-[95%] border-none bg-transparent text-white/80 placeholder:text-white/80 leading-[150%] max-md:text-sm"
             type="text"
             placeholder="Search"
+          />
+        </div>
+        <div className="flex flex-col justify-center items-center">
+          <div className="flex gap-6 w-full flex-wrap">
+            {BlogCard.map((item, i) => (
+              <div key={i}>
+                <BlogCards
+                  date={item.date}
+                  cardImage={item.image}
+                  buttonOne="Productivity"
+                  buttonTwo={item.timeReamining}
+                  description={item.description}
+                  title={item.title}
+                  profileImage={item.authorImg}
+                  profileName={item.authorName}
+                />
+              </div>
+            ))}
+          </div>
+          <CustomButton
+            customOnClick={handleShowMore}
+            className="bg-cyan px-6 shadow-commonShadow mt-10 mb-5 hover:border-cyan border border-solid border-transparent hover:bg-transparent hover:text-cyan hover:shadow-none"
+            text={
+              open < BLOGS_CARD_LIST.length
+                ? "Show all blogs"
+                : "Hide all blogs"
+            }
           />
         </div>
       </div>

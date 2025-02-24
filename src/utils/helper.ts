@@ -4,6 +4,11 @@ interface NavbarItem {
   dropdown?: NavbarItem[];
 }
 
+interface MarqueeItem {
+  title: string;
+  price: string;
+}
+
 export const NAVBAR_LIST: NavbarItem[] = [
   {
     title: "Home",
@@ -28,5 +33,44 @@ export const NAVBAR_LIST: NavbarItem[] = [
   {
     title: "Blog",
     link: "#blog",
+  },
+];
+
+export const MARQUEE_LIST: MarqueeItem[] = [
+  {
+    title: "USDJPY",
+    price: "143.651 / 143.637",
+  },
+  {
+    title: "US30",
+    price: "41048.38 / 41044.58",
+  },
+  {
+    title: "NAS100",
+    price: "18948.45 / 18945.15",
+  },
+  {
+    title: "USDJPY",
+    price: "143.651 / 143.637",
+  },
+  {
+    title: "US30",
+    price: "41048.38 / 41044.58",
+  },
+  {
+    title: "NAS100",
+    price: "18948.45 / 18945.15",
+  },
+  {
+    title: "USDJPY",
+    price: "143.651 / 143.637",
+  },
+  {
+    title: "US30",
+    price: "41048.38 / 41044.58",
+  },
+  {
+    title: "NAS100",
+    price: "18948.45 / 18945.15",
   },
 ];

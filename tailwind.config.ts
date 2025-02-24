@@ -9,8 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        gray: "#BCBBBC",
+        cyan: "#71CED0",
+        dark: "#434244",
+      },
+      boxShadow: {
+        commonShadow: "0px 4px 24.6px 0px #71CED061",
       },
     },
   },

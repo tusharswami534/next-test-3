@@ -32,13 +32,13 @@ interface ChangingGame {
 }
 
 interface ArticleCardList {
-  image: string;
-  date: string;
-  timeReamining: string;
-  title: string;
-  description: string;
-  authorImg: string;
-  authorName: string;
+  image?: string;
+  date?: string;
+  timeReamining?: string;
+  title?: string;
+  description?: string;
+  authorImg?: string;
+  authorName?: string;
 }
 
 export const NAVBAR_LIST: NavbarItem[] = [

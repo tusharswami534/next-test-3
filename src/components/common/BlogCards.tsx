@@ -4,14 +4,14 @@ import Description from "./Description";
 import { NextArrowIcon } from "@/utils/icons";
 import { title } from "process";
 interface ChangingGame {
-  date: string;
-  cardImage: string;
-  buttonOne: string;
-  buttonTwo: string;
-  description: string;
-  profileName: string;
-  profileImage: string;
-  title: string;
+  date?: string;
+  cardImage?: string;
+  buttonOne?: string;
+  buttonTwo?: string;
+  description?: string;
+  profileName?: string;
+  profileImage?: string;
+  title?: string;
 }
 
 const BlogCards = ({

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import BlogCards from "../common/BlogCards";
 import CustomButton from "../common/CustomButton";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 const Blogs = () => {
   const [open, setOpen] = useState(3);
@@ -23,7 +24,7 @@ const Blogs = () => {
 
   const handleShowMore = () => {
     const nextPage = open < BLOGS_CARD_LIST.length ? open / 3 + 1 : 1;
-    setOpen(nextPage * 3);
+    setOpen(nextPage * 6);
     window.history.pushState(null, "", `?page=${nextPage}`);
   };
   return (
@@ -45,7 +46,10 @@ const Blogs = () => {
         <div className="flex flex-col justify-center items-center">
           <div className="flex gap-6 w-full flex-wrap">
             {BlogCard.map((item, i) => (
-              <div key={i}>
+              <Link
+                href={`/blogs/${item.title.toLowerCase().replace(/ /g, "-")}`}
+                key={i}
+              >
                 <BlogCards
                   date={item.date}
                   cardImage={item.image}
@@ -56,7 +60,7 @@ const Blogs = () => {
                   profileImage={item.authorImg}
                   profileName={item.authorName}
                 />
-              </div>
+              </Link>
             ))}
           </div>
           <CustomButton

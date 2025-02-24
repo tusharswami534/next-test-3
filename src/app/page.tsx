@@ -3,7 +3,7 @@ import CommonMarquee from "@/components/common/CommonMarquee";
 import Hero from "@/components/Blog/Hero";
 import Footer from "@/components/common/Footer";
 import Market from "@/components/blog details/Market";
-import BlogCard from "@/components/common/BlogCard";
+import Blogs from "@/components/Blog/Blogs";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       {/* <Market /> */}
-      <BlogCard />
+      <Blogs />
       <Footer />
     </>
   );

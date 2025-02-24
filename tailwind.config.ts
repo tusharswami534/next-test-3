@@ -18,7 +18,8 @@ export default {
         red: "#D01314",
         lightBlue: "#D0D0D0",
         darkBlack: "#0E0C0F",
-        darkBlack: "#0E0C0F",
+        darkGray: "#0F0D10",
+        lightBlack: "#232224",
       },
       boxShadow: {
         commonShadow: "0px 4px 24.6px 0px #71CED061",

@@ -3,7 +3,6 @@ import React from "react";
 import Navbar from "../common/Navbar";
 import Description from "../common/Description";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { BLOGS_CARD_LIST } from "@/utils/helper";
 import { useParams } from "next/navigation";
 import Market from "./Market";

@@ -4,13 +4,38 @@ import { SearchIcon } from "@/utils/icons";
 import React, { useEffect, useState } from "react";
 import BlogCards from "../common/BlogCards";
 import CustomButton from "../common/CustomButton";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Router from "next/router";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
+
+// Router.events.on("routeChangeStart", () => NProgress.start());
+// // Stop NProgress when the page is done loading
+// Router.events.on("routeChangeComplete", () => NProgress.done());
+// Router.events.on("routeChangeError", () => NProgress.done());
+
+// use n progress
 
 const Blogs = () => {
   const [open, setOpen] = useState(3);
   const [search, setSearch] = useState("");
   const searchParams = useSearchParams();
+  const router = useRouter();
+  useEffect(() => {
+    const handleStart = () => NProgress.start(0.5);
+    const handleComplete = () => NProgress.done(0.5);
+
+    Router.events.on("routeChangeStart", handleStart);
+    Router.events.on("routeChangeComplete", handleComplete);
+    Router.events.on("routeChangeError", handleComplete);
+
+    return () => {
+      Router.events.off("routeChangeStart", handleStart);
+      Router.events.off("routeChangeComplete", handleComplete);
+      Router.events.off("routeChangeError", handleComplete);
+    };
+  }, [router]);
 
   useEffect(() => {
     const param = searchParams.get("page");

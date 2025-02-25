@@ -46,12 +46,13 @@ export interface ArticleCardList {
   description?: string;
   authorImg?: string;
   authorName?: string;
+  isFeatured?: boolean;
 }
 
 export const NAVBAR_LIST: NavbarItem[] = [
   {
     title: "Home",
-    link: "#home",
+    link: "/",
   },
   {
     title: "Learn to trade",
@@ -71,7 +72,7 @@ export const NAVBAR_LIST: NavbarItem[] = [
   },
   {
     title: "Blog",
-    link: "#blog",
+    link: "/blogs",
   },
 ];
 
@@ -223,6 +224,7 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
       "Stay ahead with AI-driven analytics, real-time news updates, and expert market research to make informed decisions.",
     authorImg: "/assets/images/webp/darrell-profile.webp",
     authorName: "Darrell Steward",
+    isFeatured: false,
   },
   {
     image: "/assets/images/webp/advanced.webp",
@@ -231,8 +233,9 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
     title: "Advanced Trading Platform",
     description:
       "Experience lightning-fast execution, customizable charts, and an intuitive interface designed for traders of all levels.",
-    authorImg: "/assets/images/webp/darrell-profile.webp",
+    authorImg: "/assets/images/webp/jerome.webp",
     authorName: "Jerome Bell",
+    isFeatured: false,
   },
   {
     image: "/assets/images/webp/mastering.webp",
@@ -241,8 +244,9 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
     title: "Mastering the Markets",
     description:
       "Mastering the markets involves developing a comprehensive understanding of how financial markets work, creating.",
-    authorImg: "/assets/images/webp/darrell-profile.webp",
+    authorImg: "/assets/images/webp/eleanor-pena.webp",
     authorName: "Eleanor Pena",
+    isFeatured: false,
   },
   {
     image: "/assets/images/webp/risk-management.webp",
@@ -251,8 +255,9 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
     title: "Risk Management in Trading",
     description:
       "Risk management is a critical component of successful trading. without effective risk management strategies, traders.",
-    authorImg: "/assets/images/webp/darrell-profile.webp",
+    authorImg: "/assets/images/webp/leslie-alexander.webp",
     authorName: "Leslie Alexander",
+    isFeatured: false,
   },
   {
     image: "/assets/images/webp/building.webp",
@@ -261,8 +266,9 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
     title: "Building a Diversified Portfolio",
     description:
       "Building a diversified portfolio is an essential strategy for managing risk while aiming for steady returns over time.",
-    authorImg: "/assets/images/webp/darrell-profile.webp",
+    authorImg: "/assets/images/webp/wade-warren.webp",
     authorName: "Wade Warren",
+    isFeatured: false,
   },
   {
     image: "/assets/images/webp/psychology.webp",
@@ -271,38 +277,42 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
     title: "The Psychology of Trading",
     description:
       "Trading isn’t just about numbers, charts, and market analysis—it’s also a game of emotions and psychology.",
-    authorImg: "/assets/images/webp/darrell-profile.webp",
+    authorImg: "/assets/images/webp/kristin-watson.webp",
     authorName: "Kristin Watson",
+    isFeatured: false,
   },
   {
-    image: "/assets/images/webp/psychology.webp",
+    image: "/assets/images/webp/developing.webp",
     date: "02 Aug 2024",
     timeReamining: "8 min read",
     title: "Developing a Trading Strategy",
     description:
       "Identify trends (up, down, sideways) and develop strategies that capitalize on the direction of the market.",
-    authorImg: "/assets/images/webp/darrell-profile.webp",
+    authorImg: "/assets/images/webp/guy-hawkins.webp",
     authorName: "Guy Hawkins",
+    isFeatured: false,
   },
   {
-    image: "/assets/images/webp/psychology.webp",
+    image: "/assets/images/webp/security.webp",
     date: "12 July 2025",
     timeReamining: "9 min read",
     title: "Security & Reliability",
     description:
       "Your investments are safe with robust encryption, multi-layer authentication, and secure transaction processing.",
-    authorImg: "/assets/images/webp/darrell-profile.webp",
+    authorImg: "/assets/images/webp/jacob-jones.webp",
     authorName: "Jacob Jones",
+    isFeatured: false,
   },
   {
-    image: "/assets/images/webp/psychology.webp",
+    image: "/assets/images/webp/seamless.webp",
     date: "21 June 2025",
     timeReamining: "7 min read",
     title: "Seamless Mobile Trading",
     description:
       "Access your portfolio and trade on the go with a powerful mobile app designed for performance and ease of use.",
-    authorImg: "/assets/images/webp/darrell-profile.webp",
+    authorImg: "/assets/images/webp/conrtney-henry.webp",
     authorName: "Courtney Henry",
+    isFeatured: false,
   },
 ];
 export const FOOTER_SOCAL_LINKS_LIST = [

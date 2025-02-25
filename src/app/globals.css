@@ -11,18 +11,8 @@ body{
 .swiper-wrapper{
   padding-bottom: 50px !important;
 }
-
-#nprogress .bar {  
-  background: #fff; /* Change the color here */
-  height: 10px;
-
-}  
-
-#nprogress .peg {  
-  box-shadow: 0 0 10px #29d, 0 0 5px #29d; /* Customize shadow */  
-}  
-
-#nprogress .spinner {  
-  border-top-color: #fff; /* Change spinner color */  
-
+@media (max-width : 639.98px) {
+  .socal-links svg{
+    width: 80%;
+}
 }

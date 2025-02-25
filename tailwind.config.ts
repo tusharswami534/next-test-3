@@ -23,6 +23,7 @@ export default {
       },
       boxShadow: {
         commonShadow: "0px 4px 24.6px 0px #71CED061",
+        cardShadow: "0px 5px 10px 0px #fff",
       },
       backgroundImage: {
         footer: "url('/assets/images/webp/footer-image.webp')",

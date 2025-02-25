@@ -9,9 +9,10 @@ import React from "react";
 import Description from "./Description";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
-    <div className="bg-footer bg-cover bg-no-repeat py-[60px] max-sm:pt-12 px-5">
-      <div className="container max-w-[1140px] mx-auto flex flex-col">
+    <div className="bg-footer bg-cover bg-no-repeat pt-[60px] max-md:pt-14 max-sm:pt-12 ">
+      <div className="container max-w-[1140px] mx-auto flex flex-col px-5">
         <Link href="/">
           <Image
             src="/assets/images/webp/page-logo.webp"
@@ -44,12 +45,21 @@ const Footer = () => {
         </div>
         <div className="flex gap-6 mt-[50px] items-center">
           {FOOTER_SOCAL_LINKS_LIST.map((item, index) => (
-            <Link key={index} href={item.link} target="_blank">
+            <Link
+              className="socal-links hover:scale-105 transition-all duration-300"
+              key={index}
+              href={item.link}
+              target="_blank"
+            >
               {item.icon}
             </Link>
           ))}
         </div>
       </div>
+      <div className="w-full h-[1px] bg-white/20 max-lg:mt-16 max-md:mt-12 max-sm:mt-10 mt-20"></div>
+      <p className="text-white/80 py-4 max-sm:py-3 text-center leading-[150%] max-md:text-sm">
+        Copyright © {year} ArrowTrade. All Rights Reserved.
+      </p>
     </div>
   );
 };

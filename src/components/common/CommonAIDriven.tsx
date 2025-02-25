@@ -19,7 +19,7 @@ const CommonAIDriven = ({
 }: aiDriven) => {
   return (
     <div className="container mx-auto max-w-[1140px]">
-      <div className="max-w-[655px]">
+      <div className="max-w-[655px] max-lg:max-w-[unset]">
         <CommonHeading heading={heading} colorHeading={colorHeading} />
         <Description className="mt-4 mb-[30px]" text={description} />
         <div className="flex flex-col gap-y-5">
@@ -32,14 +32,14 @@ const CommonAIDriven = ({
             </div>
           ))}
         </div>
-        <div className="mt-10 max-lg:mt-8 max-md:mt-5 max-sm:mt-3 rounded-[10px] bg-aiDriven !p-[1px]">
+        <div className="mt-10 max-lg:mt-8 max-md:mt-5 max-sm:mt-3 max-w-[655px] rounded-[10px] bg-aiDriven !p-[1px]">
           <div className="!bg-darkBlack p-2.5 max-w-[653px] rounded-[10px] w-full h-full">
             <Image
               src={image}
               width={635}
               height={550}
               alt="images"
-              className="pointer-events-none max-lg:max-w-[635px]"
+              className="pointer-events-none max-lg:max-w-[635px] max-lg:w-full"
             />
           </div>
         </div>

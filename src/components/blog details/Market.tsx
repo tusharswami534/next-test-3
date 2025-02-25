@@ -14,9 +14,9 @@ interface Props {
 
 const Market = ({ profileImage, authName }: Props) => {
   return (
-    <div className="flex justify-center items-center pb-[180px]">
-      <div className="flex container relative max-w-[1140px] ">
-        <div className="flex flex-col gap-y-[180px] ">
+    <div className="flex justify-center items-center pb-[180px] px-5">
+      <div className="flex container max-lg:flex-col-reverse max-lg:gap-5 relative max-w-[1140px] ">
+        <div className="flex flex-col gap-y-[180px] max-">
           <CommonAIDriven
             map={MARKET_INSIGHTS_LIST}
             heading="What are AI-Driven "
@@ -32,8 +32,8 @@ const Market = ({ profileImage, authName }: Props) => {
             image="/assets/images/webp/changing-game.webp"
           />
         </div>
-        <div className="max-w-[485px] w-full flex justify-end">
-          <div className="bg-driven sticky top-1 max-w-[364px] w-full border border-solid border-cyan rounded-3xl py-[30px] max-h-[525px]">
+        <div className="max-w-[485px] max-lg:max-w-[unset] w-full flex max-lg:justify-center justify-end">
+          <div className="bg-driven bg-no-repeat bg-cover bg-[100%] sticky top-1 max-w-[364px] max-lg:max-w-[unset] w-full border border-solid border-cyan rounded-3xl py-[30px] lg:max-h-[525px]">
             <div className="flex gap-4 px-5 items-center">
               <Image
                 src={profileImage}

@@ -31,7 +31,7 @@ const Hero = () => {
         <div>
           <div className="max-w-[1440px] mx-auto relative">
             <Navbar />
-            <div className="container mt-[91px] mb-[271px]  max-w-[1140px] mx-auto">
+            <div className="container mt-[91px] mb-[271px] max-lg:mb-[200px] max-md:mb-[150px] max-sm:mb-24 max-lg:flex-col max-xl:flex max-xl:gap-5 max-xl:justify-center max-xl:items-center max-w-[1140px] mx-auto px-5">
               <div className="max-w-[481px]">
                 <h2 className="text-[64.09px] max-w-[718px] text-white max-lg:text-6xl max-md:text-5xl max-sm:text-4xl leading-[121%]">
                   {blog.title}
@@ -44,13 +44,13 @@ const Hero = () => {
                   text={blog.description}
                 />
                 <div className="gap-4 items-center flex">
-                  <button className="py-[7px] px-[37px] whitespace-nowrap text-white/80 border border-solid border-cyan bg-darkGray rounded-[50px] text-sm leading-[150%]">
+                  <button className="py-[7px] px-[37px] whitespace-nowrap text-white/80 hover:bg-white hover:text-black transition-all duration-300 border border-solid border-cyan bg-darkGray rounded-[50px] text-sm leading-[150%]">
                     Productivity
                   </button>
-                  <button className="py-[7px] px-[40px] whitespace-nowrap text-white/80 border border-solid bg-lightBlack border-white rounded-[50px] text-sm leading-[150%]">
+                  <button className="py-[7px] px-[40px] whitespace-nowrap text-white/80 hover:bg-white hover:text-black transition-all duration-300 border border-solid bg-lightBlack border-white rounded-[50px] text-sm leading-[150%]">
                     {blog.timeReamining}
                   </button>
-                  <p className="leading-[150%] font-semibold max-md:text-sm text-white">
+                  <p className="leading-[150%] whitespace-nowrap font-semibold max-md:text-sm text-white">
                     {blog.date}
                   </p>
                 </div>
@@ -60,7 +60,7 @@ const Hero = () => {
                 height={570}
                 alt="blogs image"
                 src={blog.image}
-                className="absolute h-[570px] object-cover top-0 right-0"
+                className="absolute h-[570px] object-cover top-0 right-0 max-xl:relative max-xl:max-w-[600px] max-xl:w-[90%]"
               />
             </div>
           </div>

@@ -11,6 +11,7 @@ interface ChangingGame {
   profileName?: string;
   profileImage?: any;
   title?: string;
+  cardClass?: string;
 }
 
 const BlogCards = ({
@@ -22,9 +23,12 @@ const BlogCards = ({
   description,
   profileName,
   profileImage,
+  cardClass,
 }: ChangingGame) => {
   return (
-    <div className="max-w-[364px] mx-auto overflow-hidden relative rounded-[10px] bg-driven p-[1px]">
+    <div
+      className={`max-w-[364px] transition-all duration-300 max-md:max-w-[355px] mx-auto overflow-hidden relative rounded-[10px] bg-driven p-[1px] ${cardClass}`}
+    >
       <p className="leading-[150%] font-semibold max-md:text-sm text-white absolute top-5 right-5">
         {date}
       </p>
@@ -35,12 +39,12 @@ const BlogCards = ({
         alt="card-image"
         className="rounded-t-[10px]"
       />
-      <div className="max-w-[362px] bg-darkGray px-5">
+      <div className="max-w-[362px]  bg-darkGray px-5">
         <div className="justify-center items-center mt-[-18px] gap-4 flex">
-          <button className="py-[7px] px-[37px] whitespace-nowrap text-white/80 border border-solid border-cyan bg-darkGray rounded-[50px] text-sm leading-[150%]">
+          <button className="py-[7px] px-[37px] whitespace-nowrap text-white/80 hover:bg-white hover:text-black transition-all duration-300 border border-solid border-cyan bg-darkGray rounded-[50px] text-sm leading-[150%]">
             {buttonOne}
           </button>
-          <button className="py-[7px] px-[40px] whitespace-nowrap text-white/80 border border-solid bg-lightBlack border-white rounded-[50px] text-sm leading-[150%]">
+          <button className="py-[7px] px-[40px] whitespace-nowrap text-white/80 hover:bg-white hover:text-black transition-all duration-300 border border-solid bg-lightBlack border-white rounded-[50px] text-sm leading-[150%]">
             {buttonTwo}
           </button>
         </div>

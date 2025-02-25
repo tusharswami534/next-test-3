@@ -53,7 +53,7 @@ const Blogs = () => {
     window.history.pushState(null, "", `?page=${nextPage}`);
   };
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center px-5">
       <div className="container flex justify-center items-center flex-col w-full max-w-[1140px]">
         <div className="flex py-[18px] gap-2.5 items-center px-[30px] max-w-[558px] rounded-[39px] border border-solid border-white/25 w-full mb-[70px]">
           <label htmlFor="search">
@@ -76,6 +76,7 @@ const Blogs = () => {
                 key={i}
               >
                 <BlogCards
+                  cardClass="hover:shadow-cardShadow"
                   date={item.date}
                   cardImage={item.image}
                   buttonOne="Productivity"

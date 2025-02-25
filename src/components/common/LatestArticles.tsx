@@ -10,7 +10,7 @@ import { BLOGS_CARD_LIST } from "@/utils/helper";
 const LatestArticles = () => {
   const BlogCard = BLOGS_CARD_LIST.filter((card) => card.isFeatured);
   return (
-    <div>
+    <div className="px-5">
       <CommonHeading
         headingClass="text-center pb-[70px]"
         heading="Latest "
@@ -21,10 +21,24 @@ const LatestArticles = () => {
       ) : (
         <div className=" container max-w-[1140px] mx-auto">
           <Swiper
-            slidesPerView={3}
+            slidesPerView={1}
             spaceBetween={24}
-            pagination={{
-              clickable: true,
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                centeredSlides: true,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                centeredSlides: false,
+              },
+              1141: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                centeredSlides: false,
+              },
             }}
             className="mySwiper pb-10"
           >

@@ -15,6 +15,7 @@ export const DropDownIcon = () => (
 
 export const FacebookIcon = () => (
   <svg
+    className="max-sm:w-[24px] max-sm:h-[24px]"
     width="40"
     height="40"
     viewBox="0 0 40 40"

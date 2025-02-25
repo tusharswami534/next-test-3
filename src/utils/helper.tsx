@@ -257,7 +257,7 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
       "Risk management is a critical component of successful trading. without effective risk management strategies, traders.",
     authorImg: "/assets/images/webp/leslie-alexander.webp",
     authorName: "Leslie Alexander",
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     image: "/assets/images/webp/building.webp",
@@ -315,6 +315,7 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
     isFeatured: false,
   },
 ];
+
 export const FOOTER_SOCAL_LINKS_LIST = [
   {
     icon: <FacebookIcon />,

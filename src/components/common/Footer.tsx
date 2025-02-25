@@ -11,7 +11,15 @@ import Description from "./Description";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <div className="bg-footer bg-cover bg-no-repeat pt-[60px] max-md:pt-14 max-sm:pt-12 ">
+    <div className="bg-footer bg-cover bg-no-repeat pt-[60px] max-md:pt-14 relative max-sm:pt-12 ">
+      <Image
+        src="/assets/images/webp/footer-layer.webp"
+        width={117}
+        height={235}
+        alt="bg"
+        className="absolute top-[34px] right-[60px] pointer-events-none"
+      />
+      <div className="absolute top-[34px] right-[24px] size-[375px] bg-cyan/30 blur-[100px] rounded-full pointer-events-none"></div>
       <div className="container max-w-[1140px] mx-auto flex flex-col px-5">
         <Link href="/">
           <Image

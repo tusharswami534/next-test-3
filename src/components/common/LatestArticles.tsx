@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import CommonHeading from "./CommonHeading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -66,18 +66,16 @@ const LatestArticles = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            {BlogCard.length > 3 && (
-              <div className="flex justify-center items-center gap-5 mb-10">
-                <button className="swiper-prev size-[60px] bg-cyan flex justify-center items-center rounded-full max-lg:hidden xl:absolute top-[45%] -translate-y-1/2 z-10 left-[45px] max-[1400px]:left-0">
+            <div className="flex justify-center items-center gap-5 mb-10">
+              <button className="swiper-prev size-[60px] bg-cyan flex justify-center items-center rounded-full xl:absolute top-[45%] -translate-y-1/2 z-10 left-[45px] max-[1400px]:left-0">
+                <SwiperArrowIcon />
+              </button>
+              <button className="swiper-next size-[60px] bg-cyan flex justify-center items-center rounded-full xl:absolute right-[45px] top-[45%] -translate-y-1/2 z-20 max-[1400px]:right-0">
+                <span className=" rotate-180">
                   <SwiperArrowIcon />
-                </button>
-                <button className="swiper-next size-[60px] bg-cyan flex justify-center items-center rounded-full max-lg:hidden xl:absolute right-[45px] top-[45%] -translate-y-1/2 z-20 max-[1400px]:right-0">
-                  <span className=" rotate-180">
-                    <SwiperArrowIcon />
-                  </span>
-                </button>
-              </div>
-            )}
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       )}

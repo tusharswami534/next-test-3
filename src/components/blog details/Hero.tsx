@@ -7,6 +7,7 @@ import { BLOGS_CARD_LIST } from "@/utils/helper";
 import { useParams } from "next/navigation";
 import Market from "./Market";
 import Footer from "../common/Footer";
+import LatestArticles from "../common/LatestArticles";
 
 const Hero = () => {
   const { title } = useParams();
@@ -69,6 +70,7 @@ const Hero = () => {
             </div>
           </div>
           <Market authName={blog.authorName} profileImage={blog.authorImg} />
+          <LatestArticles />
           <Footer />
         </div>
       ) : (

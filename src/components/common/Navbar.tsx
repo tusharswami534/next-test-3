@@ -14,8 +14,8 @@ const Navbar = () => {
   });
   return (
     <div className="flex relative z-20 justify-center items-center px-5">
-      <div className="container max-lg:px-5 box-border border lg:backdrop-blur-xl border-dark border-solid mt-4 bg-white/10 flex justify-center items-center rounded-[60px] py-4 max-w-[1220px]">
-        <div className="flex max-w-[1092px] justify-between items-center w-full">
+      <div className="container max-lg:px-5 box-border border lg:backdrop-blur-xl px-10 border-dark border-solid mt-4 bg-white/10 flex items-center rounded-[60px] py-4 max-w-[1220px]">
+        <div className="flex max-w-[1092px] ml-auto justify-between items-center w-full">
           <Link href={`/`}>
             <Image
               src="/assets/images/webp/page-logo.webp"

@@ -62,8 +62,8 @@ export const NAVBAR_LIST: NavbarItem[] = [
     title: "Promotions",
     link: "#promotions",
     dropdown: [
-      { title: "Promotion 1", link: "#promotion1" },
-      { title: "Promotion 2", link: "#promotion2" },
+      { title: "dummy", link: "#dummy" },
+      { title: "duumy", link: "#dummy" },
     ],
   },
   {
@@ -268,7 +268,7 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
       "Building a diversified portfolio is an essential strategy for managing risk while aiming for steady returns over time.",
     authorImg: "/assets/images/webp/wade-warren.webp",
     authorName: "Wade Warren",
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     image: "/assets/images/webp/psychology.webp",

@@ -7,10 +7,11 @@ import { BLOGS_CARD_LIST } from "@/utils/helper";
 import { useParams } from "next/navigation";
 import Market from "./Market";
 import Footer from "../common/Footer";
-import NProgress from "nprogress";
 
 const Hero = () => {
   const { title } = useParams();
+  console.log(title);
+
   // const blog = BLOGS_CARD_LIST.find(
   //   (obj) => obj.title.toLowerCase().replace(/\s+/g, "-") === title
   // );
@@ -19,20 +20,17 @@ const Hero = () => {
   //   (obj) => obj.title.toLowerCase().replace(/\s+/g, "-") === title
   // );
 
-  NProgress.start();
-  setTimeout(() => {
-    NProgress.done();
-  }, 400);
-
   const blogArray = BLOGS_CARD_LIST.filter(
     (obj) =>
-      obj && obj.title && obj.title.toLowerCase().replace(/\s+/g, "-") === title
+      obj &&
+      obj.title &&
+      obj.title.toLowerCase().replace(/\s+/g, "-").replace("&", "%26") === title
   );
 
   const blog: any = blogArray.length ? blogArray[0] : null;
 
   return (
-    <div className="">
+    <>
       {blog ? (
         <div>
           <div className="max-w-[1440px] mx-auto relative">
@@ -90,7 +88,7 @@ const Hero = () => {
           </a>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

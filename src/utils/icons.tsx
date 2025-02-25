@@ -169,3 +169,20 @@ export const NextArrowIcon = () => (
     />
   </svg>
 );
+
+export const SwiperArrowIcon = ({ arrowClass }: { arrowClass?: string }) => (
+  <svg
+    className={` ${arrowClass}`}
+    width="33"
+    height="30"
+    viewBox="0 0 33 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M33 15H3M3 15L16.5 1.5M3 15L16.5 28.5"
+      stroke="#292929"
+      strokeWidth="3"
+    />
+  </svg>
+);

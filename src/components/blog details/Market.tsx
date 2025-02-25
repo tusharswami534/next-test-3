@@ -14,9 +14,9 @@ interface Props {
 
 const Market = ({ profileImage, authName }: Props) => {
   return (
-    <div className="flex justify-center items-center pb-[180px] px-5">
+    <div className="flex justify-center items-center pb-[180px] max-lg:pb-[150px] max-md:pb-28 max-sm:pb-24 px-5">
       <div className="flex container max-lg:flex-col-reverse max-lg:gap-5 relative max-w-[1140px] ">
-        <div className="flex flex-col gap-y-[180px] max-">
+        <div className="flex flex-col gap-y-[180px] max-lg:gap-y-[150px] max-md:gap-y-28 max-sm:gap-y-24 max-">
           <CommonAIDriven
             map={MARKET_INSIGHTS_LIST}
             heading="What are AI-Driven "

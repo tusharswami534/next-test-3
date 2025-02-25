@@ -11,6 +11,11 @@ body{
 .swiper-wrapper{
   padding-bottom: 50px !important;
 }
+
+.swiper-button-disabled{
+  cursor: not-allowed !important;
+}
+
 @media (max-width : 639.98px) {
   .socal-links svg{
     width: 80%;

@@ -38,6 +38,7 @@ const Navbar = () => {
                   onMouseLeave={() => item.dropdown && setDropdownOpen(false)}
                 >
                   <Link
+                    onClick={() => setOpen(false)}
                     className={`text-gray leading-[121%] flex items-center relative after:absolute after:transition-all after:duration-300 after:h-[2px] after:w-0 after:bg-cyan after:-bottom-1 hover:after:w-full ${
                       item.title === "Blog" && "!text-cyan font-bold"
                     }`}
@@ -47,7 +48,7 @@ const Navbar = () => {
                     {item.dropdown && (
                       <span className="ml-1">
                         <DropDownIcon />
-                      </span> // Add arrow
+                      </span>
                     )}
                   </Link>
                   {item.dropdown && dropdownOpen && (

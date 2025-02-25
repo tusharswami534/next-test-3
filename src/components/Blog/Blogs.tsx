@@ -8,7 +8,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 const Blogs = () => {
-  const [open, setOpen] = useState(6);
+  const [open, setOpen] = useState(3);
   const [search, setSearch] = useState("");
   const searchParams = useSearchParams();
 
@@ -45,7 +45,7 @@ const Blogs = () => {
         </div>
         <div className="flex flex-col justify-center items-center">
           <div className="flex gap-6 w-full flex-wrap">
-            {BlogCard.map((item, i) => (
+            {BlogCard.map((item: any, i: number) => (
               <Link
                 href={`/blogs/${item.title.toLowerCase().replace(/ /g, "-")}`}
                 key={i}

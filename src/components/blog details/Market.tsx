@@ -7,8 +7,12 @@ import {
   MARKET_INSIGHTS_LIST,
 } from "@/utils/helper";
 import Image from "next/image";
+interface Props {
+  profileImage: string;
+  authName: string;
+}
 
-const Market = () => {
+const Market = ({ profileImage, authName }: Props) => {
   return (
     <div className="flex justify-center items-center pb-[180px]">
       <div className="flex container relative max-w-[1140px] ">
@@ -32,13 +36,14 @@ const Market = () => {
           <div className="bg-driven sticky top-1 max-w-[364px] w-full border border-solid border-cyan rounded-3xl py-[30px] max-h-[525px]">
             <div className="flex gap-4 px-5 items-center">
               <Image
-                src={"/assets/images/png/darrell-profile.png"}
+                src={profileImage}
                 width={80}
                 height={80}
                 alt="profile image"
+                className="rounded-full pointer-events-none"
               />
               <p className="font-semibold text-white leading-[150%] max-md:text-sm">
-                Darrell Steward
+                {authName}
               </p>
             </div>{" "}
             <div className="flex flex-col px-5  gap-y-4">
@@ -46,7 +51,10 @@ const Market = () => {
                 What are AI-Driven Market Insights?
               </p>
               {MARKET_HEADING_LIST.map((item, index) => (
-                <p className="text-white/70 leading-[150%] max-md:text-sm">
+                <p
+                  key={index}
+                  className="text-white/70 leading-[150%] max-md:text-sm"
+                >
                   {item}
                 </p>
               ))}

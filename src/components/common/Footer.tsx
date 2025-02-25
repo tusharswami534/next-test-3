@@ -1,4 +1,8 @@
-import { FOOTERDISCLAIMERS_LIST, FOOTERLINKS_LIST } from "@/utils/helper";
+import {
+  FOOTER_SOCAL_LINKS_LIST,
+  FOOTERDISCLAIMERS_LIST,
+  FOOTERLINKS_LIST,
+} from "@/utils/helper";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -36,6 +40,13 @@ const Footer = () => {
               <Description text={item.description} />
               <Description className="mt-2.5" text={item.descriptionTwo} />
             </div>
+          ))}
+        </div>
+        <div className="flex gap-6 mt-[50px] items-center">
+          {FOOTER_SOCAL_LINKS_LIST.map((item, index) => (
+            <Link key={index} href={item.link} target="_blank">
+              {item.icon}
+            </Link>
           ))}
         </div>
       </div>

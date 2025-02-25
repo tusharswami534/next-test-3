@@ -23,7 +23,7 @@ const CommonAIDriven = ({
         <CommonHeading heading={heading} colorHeading={colorHeading} />
         <Description className="mt-4 mb-[30px]" text={description} />
         <div className="flex flex-col gap-y-5">
-          {map.map((item, index) => (
+          {map.map((item: any, index: number) => (
             <div key={index} className="flex flex-col gap-y-4">
               <p className="text-white leading-[150%] font-semibold max-md:text-sm">
                 {item.title}

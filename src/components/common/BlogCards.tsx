@@ -2,15 +2,14 @@ import Image from "next/image";
 import React from "react";
 import Description from "./Description";
 import { NextArrowIcon } from "@/utils/icons";
-import { title } from "process";
 interface ChangingGame {
   date?: string;
-  cardImage?: string;
+  cardImage?: any;
   buttonOne?: string;
   buttonTwo?: string;
   description?: string;
   profileName?: string;
-  profileImage?: string;
+  profileImage?: any;
   title?: string;
 }
 

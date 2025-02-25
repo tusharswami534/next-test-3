@@ -1,7 +1,7 @@
 import React from "react";
 interface DescriptionProps {
   className?: string;
-  text: string;
+  text?: string;
 }
 
 const Description = ({ className, text }: DescriptionProps) => {

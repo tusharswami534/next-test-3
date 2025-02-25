@@ -1,4 +1,11 @@
-import { FacebookIcon } from "./icons";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TicTokIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "./icons";
 
 interface NavbarItem {
   title: string;
@@ -31,7 +38,7 @@ interface ChangingGame {
   description: string;
 }
 
-interface ArticleCardList {
+export interface ArticleCardList {
   image?: string;
   date?: string;
   timeReamining?: string;
@@ -296,5 +303,31 @@ export const BLOGS_CARD_LIST: ArticleCardList[] = [
       "Access your portfolio and trade on the go with a powerful mobile app designed for performance and ease of use.",
     authorImg: "/assets/images/webp/darrell-profile.webp",
     authorName: "Courtney Henry",
+  },
+];
+export const FOOTER_SOCAL_LINKS_LIST = [
+  {
+    icon: <FacebookIcon />,
+    link: "https://www.facebook.com/",
+  },
+  {
+    icon: <InstagramIcon />,
+    link: "https://www.instagram.com/",
+  },
+  {
+    icon: <YoutubeIcon />,
+    link: "https://www.youtube.com/",
+  },
+  {
+    icon: <TicTokIcon />,
+    link: "https://www.tiktok.com/en/",
+  },
+  {
+    icon: <TwitterIcon />,
+    link: "https://x.com/?lang=en",
+  },
+  {
+    icon: <LinkedinIcon />,
+    link: "https://www.linkedin.com/",
   },
 ];

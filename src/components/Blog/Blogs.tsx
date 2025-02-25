@@ -8,7 +8,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 const Blogs = () => {
-  const [open, setOpen] = useState(3);
+  const [open, setOpen] = useState(6);
   const [search, setSearch] = useState("");
   const searchParams = useSearchParams();
 

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CommonAIDriven from "../common/CommonAIDriven";
 import {

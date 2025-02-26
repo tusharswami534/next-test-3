@@ -31,10 +31,10 @@ const Hero = () => {
   const blog: any = blogArray.length ? blogArray[0] : null;
 
   return (
-    <div className="relative overflow-hidden">
-      <div className="size-[350px] absolute filter left-[-10%] top-[1%] blur-[100px] bg-cyan/30 rounded-full pointer-events-none"></div>
+    <>
       {blog ? (
-        <div>
+        <div className="overflow-hidden relative">
+          <div className="size-[350px] absolute filter left-[-10%] top-[1%] blur-[100px] bg-cyan/30 rounded-full pointer-events-none"></div>
           <div className="max-w-[1440px] mx-auto relative">
             <Navbar />
             <div className="container mt-[91px] max-lg:mt-20 max-md:mt-16 max-sm:mt-12 mb-[271px] max-lg:mb-[150px] max-md:mb-28 max-sm:mb-24 max-lg:flex-col max-xl:flex max-xl:gap-5 max-xl:justify-center max-xl:items-center max-w-[1140px] mx-auto px-5">
@@ -91,7 +91,7 @@ const Hero = () => {
           </a>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

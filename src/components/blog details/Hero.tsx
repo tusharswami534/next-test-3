@@ -31,7 +31,8 @@ const Hero = () => {
   const blog: any = blogArray.length ? blogArray[0] : null;
 
   return (
-    <>
+    <div className="relative overflow-hidden">
+      <div className="size-[350px] absolute filter left-[-10%] top-[1%] blur-[100px] bg-cyan/30 rounded-full pointer-events-none"></div>
       {blog ? (
         <div>
           <div className="max-w-[1440px] mx-auto relative">
@@ -90,7 +91,7 @@ const Hero = () => {
           </a>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

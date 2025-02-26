@@ -14,7 +14,9 @@ interface Props {
 
 const Market = ({ profileImage, authName }: Props) => {
   return (
-    <div className="flex justify-center items-center pb-[180px] max-lg:pb-[150px] max-md:pb-28 max-sm:pb-24 px-5">
+    <div className="flex justify-center items-center pb-[180px] max-lg:pb-[150px] relative max-md:pb-28 max-sm:pb-24 px-5">
+      <div className="size-[350px] absolute filter left-[-10%] top-[42%] blur-[100px] bg-cyan/30 rounded-full pointer-events-none"></div>
+      <div className="size-[350px] absolute filter right-[-10%] bottom-[-5%] blur-[100px] bg-cyan/30 rounded-full pointer-events-none"></div>
       <div className="flex container max-lg:flex-col-reverse max-lg:gap-5 relative max-w-[1140px] ">
         <div className="flex flex-col gap-y-[180px] max-lg:gap-y-[150px] max-md:gap-y-28 max-sm:gap-y-24 max-">
           <CommonAIDriven
